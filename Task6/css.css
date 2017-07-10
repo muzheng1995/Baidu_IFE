@@ -1,0 +1,352 @@
+body{
+    text-align: center;
+    background: #000000;
+}
+.main{
+    height: 1386px;
+    width: 980px;
+    margin:0 auto;
+    background: #ffffff;
+    text-align: center;
+}
+.top{
+    height: 61px;
+    width:892px;
+    font-family: 黑体;
+    font-size: 12px;
+    margin:0 auto;
+}
+.top_box{
+    height: 61px;
+    width:110px;
+    background:#d45d5c ;
+    position: relative;
+    float: left;
+}
+.top_box p{
+    color:#ffffff;
+    position: absolute;
+    margin: 0px;
+    padding:4px;
+    bottom: 0px;
+}
+.top_font{
+    float: right;
+    height:61px;
+    width: 50px;
+    position: relative;
+}
+.top_font p{
+    color: #d45d5c;
+    position: absolute;
+    margin: 0;
+    padding:4px;
+    bottom: 0px;
+}
+.line{
+    height: 2px;
+    width: 892px;
+    background: #938e8c;
+    margin:0 auto;
+}
+.area1{
+    width:892px;
+    height: 301px;
+    margin:0 auto;
+    padding: 20px 0 0 0;
+}
+.left_top{
+    height: 301px;
+    width: 641px;
+    float: left;
+    background-image: url("pictures/left_top.png");
+}
+.right_top{
+    height: 301px;
+    width: 203px;
+    float: right;
+    text-align: left;
+}
+.green{
+    height:301px;
+    width:191px;
+    float: left;
+}
+.red{
+    height:301px;
+    width:191px;
+    float:right;
+}
+.line2{
+    height: 2px;
+    width: 203px;
+    background: #cc8091;
+}
+.right_top_font1{
+    font-size: 24px;
+    color: #000000;
+    font-family:"微软雅黑";
+    font-variant: small-caps;
+    text-decoration: underline;
+    margin: 0px;
+}
+.right_top_font2{
+    font-size: 12px;
+    color: #676767;
+    font-family:"楷体";
+    font-style: italic;
+    margin: 0px;
+}
+.right_top_font3{
+    font-size: 116px;
+    color: #75b86b;
+    font-family: "微软雅黑";
+    margin: 0px;
+    height: 140px;
+}
+.right_top_font4{
+    height: 60px;
+    position: relative;
+}
+.right_top_font4 p{
+    color:#cc8091;
+    font-family: "微软雅黑";
+    margin: 0px;
+}
+.right_top_font5{
+    display: inline-block;
+    position: absolute;
+    margin: 0;
+    padding:0px;
+    bottom: 0px;
+}
+.area2{
+    width:892px;
+    height: 200px;
+    margin:0 auto;
+    padding: 20px 0 0 0;
+    text-align: left;
+}
+.area2_left{
+    height: 200px;
+    width: 641px;
+}
+.what{
+    font-size: 16px;
+    font-family: "微软雅黑";
+    text-decoration: underline;
+    font-weight: bold;
+    margin:0px;
+}
+.duanluo1{
+    font-size: 12px;
+    color:#767777;
+    font-family: "宋体";
+    line-height: 16px;
+    margin: 0px;
+}
+.what2{
+    font-size: 12px;
+    corlor:#231815;
+    font-family: "微软雅黑";
+    opacity: 0.7;
+    line-height: 16px;
+    margin: 0px;
+}
+.percent{
+    font-size: 12px;
+    color: #cd4a48;
+    font-family: "微软雅黑";
+    font-style: oblique;
+    opacity: 0.7;
+    line-height: 16px;
+    margin: 0px;
+}
+.area3{
+    width:892px;
+    height: 680px;
+    margin:0 auto;
+    padding: 30px 0 0 0;
+    text-align: left;
+}
+.left_bottom{
+    width: 415px;
+    float:left;
+}
+.right_bottom{
+    width:458px;
+    float: right;
+}
+.area3_font1{
+    font-size: 72px;
+    color: #f5e327;
+    font-family: "黑体";
+    font-weight: bold;
+    font-style: oblique;
+    margin: 0px;
+}
+.area3_font2{
+    font-size: 42px;
+    color: #11456b;
+    font-family: "黑体";
+    font-weight: bold;
+    margin: 0px;
+}
+.area3_font3{
+    font-size:70px;
+    color:#f5e327;
+    font-family: "微软雅黑";
+    margin:0px;
+}
+.area3_font4{
+    font-size: 12px;
+    color:#767777;
+    font-family: "宋体";
+    line-height: 16px;
+    margin: 0px;
+}
+.left_bottom_top{
+    width: 415px;
+}
+.line3{
+    height: 2px;
+    width: 415px;
+    background: #11456b;
+    margin: 10px 0;
+}
+.area3_left{
+    float: left;
+    padding: 0 2px 0 0;
+    margin: 0px;
+}
+.area3_right{
+    float:right;
+    margin: 15px 10px 15px 10px;
+}
+.right_bottom_top{
+    width: 458px;
+    height: 257px;
+    background-image: url("pictures/pic2.png");
+    position: relative;
+}
+.pic2_front{
+    width: 458px;
+    height:61px;
+    background-image: url("pictures/cover.png");
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    bottom: 0px;
+}
+.line4{
+    width:3px;
+    height: 44px;
+    background: #72b16a;
+    margin: 8.5px 20px 8.5px 40px;
+    display: inline-block;
+    float: left;
+}
+.area3_font5{
+    font-size:26px;
+    color:#ffffff;
+    font-family: "微软雅黑";
+    margin: 0px;
+}
+.area3_font6{
+    font-size:12px;
+    color:#72b16a;
+    font-style: oblique;
+    font-family: "微软雅黑";
+    margin: 0px;
+}
+.pic2_font{
+    display: inline-block;
+    float: left;
+}
+.right_bottom_bottom{
+    width:459px;
+    height: 350px;
+    background: #ffebcd;
+    margin: 30px 0 0 0;
+    position: relative;
+}
+.area3_font7{
+    font-size: 16px;
+    color:#5a5b5b;
+    font-family: "宋体";
+    line-height: 28px;
+}
+.area3_font8{
+    font-size: 12px;
+    color:#5a5b5b;
+    font-family: "宋体";
+    font-style: oblique;
+    line-height: 28px;
+    float: right;
+    position: relative;
+}
+.box{
+    height:160px;
+    width: 260px;
+    background: #d45d5c;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    bottom: 0px;
+    vertical-align: middle;
+}
+.area3_font9{
+    font-size:110px;
+    color:#ffffff;
+    font-family: "微软雅黑";
+    margin: 7.5px 5px;
+}
+.line5{
+    height: 86px;
+    width:2px;
+    background: #ffffff;
+    display: inline-block;
+    float: left;
+    margin: 37px 5px 37px 0;
+}
+.area3_font10{
+    font-size: 21px;
+    color:#ffffff;
+    font-family: "黑体";
+    font-style: oblique;
+    margin: 0px;
+}
+.area3_font11{
+    font-size: 12px;
+    color:#ffffff;
+    font-family: "黑体";
+    margin: 0px;
+}
+.area3_font12{
+    font-size:72px;
+    color: #d45d5c;
+    font-family: "黑体";
+    margin: 0px;
+    width: 43px;
+    height: 20px;
+}
+.area3_font13{
+    font-size: 14px;
+    color:#5a5b5b;
+    font-family: "黑体";
+    font-style: oblique;
+}
+.box2{
+    display: inline-block;
+    float: right;
+    width:170px;
+    padding: 0 10px;
+}
+.bottom{
+    width:892px;
+    font-family: 黑体;
+    font-size: 12px;
+    margin:0 auto;
+    color:#d45d5c;
+    text-align: right;
+}
