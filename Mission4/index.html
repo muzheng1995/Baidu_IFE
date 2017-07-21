@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>基础JavaScript练习（一）</title>
+    <style type="text/css">
+        input{
+            background:#ffffff;
+            border: 1px #cccccc solid;
+            border-radius: 5px;
+        }
+        .number{
+            height: 40px;
+            width: 30px;
+            background: #ff0000;
+            color: #ffffff;
+            font-size: 20px;
+            float: left;
+            margin: 0 10px;
+            list-style: none;
+            text-align: center;
+            line-height: 40px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="number-input">
+    <input type="button" id="left-in" value="左侧入" onclick="left_in_func()">
+    <input type="button" id="right-in" value="右侧入" onclick="right_in_func()">
+    &nbsp;&nbsp;&nbsp;
+    <input type="button" id="left-out" value="左侧出" onclick="left_out_func()">
+    <input type="button" id="right-out" value="右侧出" onclick="right_out_func()">
+    <ul id="list">
+
+    </ul>
+
+    <script type="text/javascript">
+        var number_input=document.getElementById("number-input");
+        var con=document.getElementById("list");
+
+        //判断input中的是否为数字,是否为空
+        function isNumber(){
+            if(number_input.value!="") {
+                if(isNaN(number_input.value)){
+                    alert("input内容不是数字");
+                    return false;
+                }
+                else
+                    return true;
+            }
+            else{
+                alert("input不能为空");
+                return false;
+            }
+        }
+
+        //点击“左侧入”，将input中输入的数字从左侧插入队列中
+        function left_in_func() {
+            if(isNumber()) {
+                var newLi = document.createElement("li");
+                newLi.innerHTML = number_input.value;
+                newLi.className = "number";
+                con.insertBefore(newLi, con.firstElementChild);
+            }
+        }
+        //点击“右侧入”，将input中输入的数字从右侧插入队列中
+        function right_in_func() {
+            if(isNumber()) {
+                var newLi = document.createElement("li");
+                newLi.innerHTML = number_input.value;
+                newLi.className = "number";
+                con.appendChild(newLi);
+            }
+        }
+        //点击“左侧出”，读取并删除队列左侧第一个元素，并弹窗显示元素中数值
+        function left_out_func() {
+            if (con.children.length == 0) {
+                alert("队列为空，无可删除的元素");
+            }
+            else{
+                alert("删除数字"+con.firstElementChild.innerText);
+                con.removeChild(con.firstElementChild);
+            }
+
+        }
+        //点击“左侧出”，读取并删除队列左侧第一个元素，并弹窗显示元素中数值
+        function right_out_func(){
+            if (con.children.length == 0) {
+                alert("队列为空，无可删除的元素");
+            }
+            else {
+                alert("删除数字" + con.lastElementChild.innerText);
+                con.removeChild(con.lastElementChild);
+            }
+        }
+        //点击队列中的元素，该元素从队列中删除
+        con.addEventListener('click',function (e) {
+            alert("删除数字"+e.target.textContent);
+            con.removeChild(e.target);
+        });
+    </script>
+</body>
+</html>
