@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>基础JavaScript练习（三）</title>
+    <style type="text/css">
+        textarea{
+            background:#ffffff;
+            border: 1px #cccccc solid;
+            border-radius: 5px;
+            height: 200px;
+            width: 400px;
+            resize: none;
+        }
+        input{
+            background:#ffffff;
+            border: 1px #cccccc solid;
+            border-radius: 5px;
+        }
+        .text{
+            height: 40px;
+            background: #ff0000;
+            color: #ffffff;
+            font-size: 20px;
+            float: left;
+            margin: 0 10px;
+            list-style: none;
+            text-align: center;
+            line-height: 40px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+<textarea type="text" id="text-input" placeholder="请输入内容并使用符号作为间隔"></textarea>
+<br><br>
+<input type="button" id="left-in" value="左侧入" onclick="left_in_func()">
+<input type="button" id="right-in" value="右侧入" onclick="right_in_func()">
+&nbsp;&nbsp;&nbsp;
+<input type="button" id="left-out" value="左侧出" onclick="left_out_func()">
+<input type="button" id="right-out" value="右侧出" onclick="right_out_func()">
+<br><br>
+<input type="text" id="search-input">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="button" id="search-btn" value="查询" onclick="search_func()">
+<ul id="list" style="padding-left: 0px">
+
+</ul>
+
+<script type="text/javascript">
+    var text_input=document.getElementById("text-input");
+    var con=document.getElementById("list");
+    var search_input=document.getElementById("search-input");
+    var btn=document.getElementById("search-btn");
+    
+    var text=[];
+    var flag;
+
+    //判断textarea内容是否为空
+    function isEmpty(){
+        if(text_input.value=="") {
+            alert("input不能为空");
+            return false;
+        }
+        return true;
+    }
+
+    //点击“左侧入”，将textarea中的内容从左侧插入队列中
+    function left_in_func() {
+        if(isEmpty()) {
+            text=text_input.value.split(/[,，\s、\r]/);
+            for(var i=0;i<text.length;i++) {
+                var newLi = document.createElement("li");
+                newLi.innerHTML = text[i];
+                newLi.className = "text";
+                con.insertBefore(newLi, con.firstElementChild);
+            }
+        }
+    }
+    //点击“右侧入”，将textarea中的内容从右侧插入队列中
+    function right_in_func() {
+        if(isEmpty()) {
+            text=text_input.value.split(/[,，\s、\r]/);
+            for(var i=0;i<text.length;i++) {
+                var newLi = document.createElement("li");
+                newLi.innerHTML = text[i];
+                newLi.className = "text";
+                con.appendChild(newLi);
+            }
+        }
+    }
+    //点击“左侧出”，读取并删除队列左侧第一个元素，并弹窗显示元素内容
+    function left_out_func() {
+        if (con.children.length == 0) {
+            alert("队列为空，无可删除的元素");
+        }
+        else{
+            alert("删除内容"+con.firstElementChild.innerText);
+            con.removeChild(con.firstElementChild);
+        }
+
+    }
+    //点击“右侧出”，读取并删除队列右侧第一个元素，并弹窗显示元素内容
+    function right_out_func(){
+        if (con.children.length == 0) {
+            alert("队列为空，无可删除的元素");
+        }
+        else {
+            alert("删除内容" + con.lastElementChild.innerText);
+            con.removeChild(con.lastElementChild);
+        }
+    }
+    //点击查询，将查询词在各个元素内容中做模糊匹配，将匹配到的内容进行特殊标识
+    function search_func(){
+        flag=false;
+        if(search_input.value=="")
+            alert("查询时，输入框内容为不能为空");
+        else if (con.children.length == 0)
+            alert("队列为空，无查询结果");
+        else {
+            for (var i = 0; i < con.children.length; i++) {
+                if (con.children[i].innerText.match(search_input.value) ) {
+                    con.children[i].style.backgroundColor = "#abdcf0";
+                    flag=true;
+                }
+                else{
+                    con.children[i].style.backgroundColor = "#ff0000";
+                }
+            }
+            if(!flag){
+                alert("查询结果为空");
+            }
+        }
+    }
+    //点击队列中的元素，该元素从队列中删除
+    con.addEventListener('click',function (e) {
+        alert("删除内容:"+e.target.textContent);
+        con.removeChild(e.target);
+    });
+</script>
+</body>
+</html>
